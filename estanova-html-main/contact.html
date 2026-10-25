@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto y salones privados | EstateNova Bienes Raíces de Lujo</title>
+  <meta name="description" content="Inicia una consulta confidencial con los socios directores de EstateNova y nuestros salones regionales." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="min-h-screen flex flex-col bg-stone-50 text-stone-900 font-sans selection:bg-amber-700 selection:text-white">
+
+  <!-- NAVBAR -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-stone-950/80 backdrop-blur-md border-b border-stone-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="group flex items-center gap-3">
+          <div class="w-9 h-9 border border-amber-400/80 flex items-center justify-center bg-stone-900/40 backdrop-blur-sm group-hover:border-amber-300 transition-colors">
+            <span class="font-brand font-bold text-lg tracking-widest text-amber-400 group-hover:text-amber-300">
+              EN
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-brand text-xl font-bold tracking-[0.2em] text-white uppercase group-hover:text-amber-300 transition-colors">
+              EstateNova
+            </span>
+            <span class="text-[9px] uppercase tracking-[0.3em] text-stone-400 font-light -mt-0.5">
+              Bienes Raíces de Lujo
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="properties.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-stone-300 hover:text-amber-400">
+            Propiedades
+          </a>
+          <a href="services.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-stone-300 hover:text-amber-400">
+            Servicios
+          </a>
+          <a href="agents.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-stone-300 hover:text-amber-400">
+            Asesores privados
+          </a>
+          <a href="about.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-stone-300 hover:text-amber-400">
+            Nosotros
+          </a>
+          <a href="contact.html" class="text-xs uppercase tracking-[0.2em] font-medium transition-colors text-amber-400">
+            Contacto
+          </a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-4">
+          <a href="tel:+15550192834" class="hidden xl:flex items-center gap-2 text-xs text-stone-300 hover:text-amber-400 transition-colors tracking-wider">
+            <svg class="w-3.5 h-3.5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+1 (555) 019-2834</span>
+          </a>
+
+          <!-- Saved Shortlist Button -->
+          <button type="button" class="open-favorites-drawer-btn relative p-2.5 text-stone-300 hover:text-amber-400 transition-colors cursor-pointer" title="Ver propiedades guardadas">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <span class="favorites-badge-count hidden absolute -top-0.5 -right-0.5 w-4 h-4 bg-amber-600 text-white rounded-full text-[10px] font-bold flex items-center justify-center">0</span>
+          </button>
+
+          <button type="button" class="open-schedule-modal-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-amber-700 hover:bg-amber-600 text-white text-xs uppercase tracking-[0.15em] font-medium transition-colors cursor-pointer">
+            <span>Programar visita</span>
+          </button>
+
+          <button type="button" id="mobile-menu-open-btn" aria-label="Abrir menú de navegación" class="lg:hidden p-2 text-stone-300 hover:text-white cursor-pointer">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1">
+    <!-- PAGE HEADER -->
+    <div class="bg-stone-900 text-white pt-32 pb-16 border-b border-stone-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-3">
+          <div class="inline-flex items-center gap-2 text-amber-400 text-[11px] uppercase tracking-[0.25em] font-medium">
+            <span class="w-6 h-px bg-amber-400"></span>
+            <span>Consultas privadas y salones</span>
+          </div>
+          <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-white leading-tight">
+            Inicia una conversación confidencial
+          </h1>
+          <p class="text-xs sm:text-sm text-stone-300 font-light leading-relaxed max-w-2xl">
+            Acceso directo a nuestros socios directores y a nuestras mesas regionales en Beverly Hills, Manhattan, Miami Beach y Aspen.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN GRID SECTION -->
+    <div class="py-20 bg-stone-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- LEFT COLUMN: CONFIDENTIAL INQUIRY FORM -->
+          <div class="lg:col-span-7 bg-white border border-stone-200 p-8 sm:p-10 shadow-sm">
+            <div class="mb-8">
+              <span class="text-[10px] uppercase tracking-[0.25em] text-amber-800 font-semibold block">Envío confidencial</span>
+              <h2 class="font-serif text-2xl sm:text-3xl text-stone-900 font-normal mt-1">Consulta directa con el titular</h2>
+              <p class="text-xs text-stone-500 font-light mt-2 leading-relaxed">
+                Toda comunicación se maneja bajo estricta confidencialidad bilateral. Los campos marcados con asterisco son obligatorios.
+              </p>
+            </div>
+
+            <!-- Buyer/Seller Inquiry Form -->
+            <form id="contact-inquiry-form" class="space-y-5" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Nombre legal completo *</label>
+                  <input type="text" name="contact_name" required placeholder="p. ej., Katherine Sterling" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2.5 text-xs font-light focus:outline-none focus:border-amber-700 transition-colors" />
+                  <p id="error-contact-name" class="hidden text-[11px] text-rose-600 mt-1 font-light">Ingresa tu nombre legal completo.</p>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Correo electrónico *</label>
+                  <input type="email" name="contact_email" required placeholder="katherine@familyoffice.com" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2.5 text-xs font-light focus:outline-none focus:border-amber-700 transition-colors" />
+                  <p id="error-contact-email" class="hidden text-[11px] text-rose-600 mt-1 font-light">Ingresa un correo electrónico válido.</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Teléfono *</label>
+                  <input type="tel" name="contact_phone" required placeholder="+1 (555) 000-0000" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2.5 text-xs font-light focus:outline-none focus:border-amber-700 transition-colors" />
+                  <p id="error-contact-phone" class="hidden text-[11px] text-rose-600 mt-1 font-light">Ingresa un número de teléfono válido.</p>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Destino / mesa de interés</label>
+                  <select name="contact_desk" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2.5 text-xs font-light focus:outline-none focus:border-amber-700">
+                    <option value="beverly-hills">Mesa Beverly Hills y Montecito</option>
+                    <option value="manhattan">Mesa Manhattan</option>
+                    <option value="miami">Mesa Miami Beach e Islas</option>
+                    <option value="aspen">Mesa Aspen y Montaña</option>
+                    <option value="international">Mesa Internacional / Transfronteriza</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Tipo de asesoría solicitada *</label>
+                <select name="contact_interest" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2.5 text-xs font-light focus:outline-none focus:border-amber-700">
+                  <option value="acquiring">Adquirir una propiedad generacional ($15M – $50M+)</option>
+                  <option value="divesting">Venta confidencial / colocación fuera de mercado</option>
+                  <option value="leasing">Alquiler de lujo prime a largo plazo o por temporada</option>
+                  <option value="structuring">Consulta sobre entidades soberanas y FIRPTA</option>
+                  <option value="partnership">Alianza de corretaje con asesores senior</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Resumen confidencial y criterios *</label>
+                <textarea name="contact_message" rows="5" required placeholder="Describe la superficie deseada, preferencias de ubicación, plazos y cualquier requisito específico de privacidad o seguridad..." class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2.5 text-xs font-light focus:outline-none focus:border-amber-700 transition-colors"></textarea>
+                <p id="error-contact-message" class="hidden text-[11px] text-rose-600 mt-1 font-light">Describe tu solicitud o criterios.</p>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" class="w-full py-3.5 bg-stone-900 hover:bg-amber-700 text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors flex items-center justify-center gap-2 cursor-pointer">
+                  <span>Enviar consulta confidencial</span>
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+              </div>
+            </form>
+
+            <!-- Success State -->
+            <div id="contact-form-success" class="hidden text-center py-12 space-y-4">
+              <div class="w-16 h-16 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto border border-amber-200">
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <h3 class="font-serif text-2xl text-stone-900 font-medium">Gracias. Tu consulta fue recibida con éxito.</h3>
+              <p class="text-xs sm:text-sm text-stone-600 font-light max-w-md mx-auto leading-relaxed">
+                Tu mensaje fue registrado directamente con nuestros socios directores. Un asesor de clientes privados te contactará en un plazo de 4 horas hábiles.
+              </p>
+              <div class="pt-2">
+                <button type="button" id="contact-form-reset-btn" class="px-6 py-2.5 bg-stone-900 hover:bg-amber-700 text-white text-xs uppercase tracking-wider font-medium cursor-pointer transition-colors">
+                  Enviar otra consulta
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: REGIONAL SALONS & INTERACTIVE MAP INTEGRATION -->
+          <div class="lg:col-span-5 space-y-8">
+            <!-- Salons List -->
+            <div class="bg-white border border-stone-200 p-8 shadow-sm space-y-6">
+              <div class="border-b border-stone-100 pb-4">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-amber-800 font-semibold block">Salones físicos</span>
+                <h3 class="font-serif text-xl text-stone-900 font-normal mt-0.5">Oficinas principales</h3>
+              </div>
+
+              <div class="space-y-5 text-xs font-light text-stone-600">
+                <div class="border-l-2 border-amber-600 pl-3">
+                  <h4 class="font-serif text-sm font-medium text-stone-900">Sede principal Beverly Hills</h4>
+                  <p>100 Luxury Boulevard, oficina 400, Beverly Hills, CA 90210</p>
+                  <p class="text-stone-400 mt-0.5">Línea directa: <a href="tel:+15550192834" class="text-amber-800">+1 (555) 019-2834</a></p>
+                </div>
+
+                <div class="border-l-2 border-amber-600 pl-3">
+                  <h4 class="font-serif text-sm font-medium text-stone-900">Salón Manhattan</h4>
+                  <p>740 Madison Avenue, piso 14, New York, NY 10065</p>
+                  <p class="text-stone-400 mt-0.5">Línea directa: <a href="tel:+15550192835" class="text-amber-800">+1 (555) 019-2835</a></p>
+                </div>
+
+                <div class="border-l-2 border-amber-600 pl-3">
+                  <h4 class="font-serif text-sm font-medium text-stone-900">Mesa Marítima Miami Beach</h4>
+                  <p>1000 Venetian Way, oficina 800, Miami Beach, FL 33139</p>
+                  <p class="text-stone-400 mt-0.5">Línea directa: <a href="tel:+15550192836" class="text-amber-800">+1 (555) 019-2836</a></p>
+                </div>
+
+                <div class="border-l-2 border-amber-600 pl-3">
+                  <h4 class="font-serif text-sm font-medium text-stone-900">Mesa Alpina Aspen</h4>
+                  <p>420 South Galena Street, oficina 200, Aspen, CO 81611</p>
+                  <p class="text-stone-400 mt-0.5">Línea directa: <a href="tel:+15550192837" class="text-amber-800">+1 (555) 019-2837</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- TARJETA DE MAPA / INTEGRACIÓN -->
+            <!-- 
+              NOTA PARA EL COMPRADOR / DESARROLLADOR (INTEGRACIÓN DE MAPA):
+              Para insertar un mapa real de Google Maps o Mapbox GL:
+              1. Agrega el script de Google Maps Embed API o Mapbox JS en el <head>.
+              2. Reemplaza el cuadro de vista previa de abajo por tu <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=100+Luxury+Blvd,Beverly+Hills,CA"></iframe>
+            -->
+            <div class="bg-stone-900 text-white p-6 border border-stone-800 shadow-xl space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] uppercase tracking-[0.2em] text-amber-400 font-semibold block">Sede global</span>
+                  <h4 class="font-serif text-lg text-white font-normal">Salón principal Beverly Hills</h4>
+                </div>
+                <span class="text-[10px] uppercase tracking-wider text-stone-400 bg-stone-800 px-2 py-0.5">DRE #01928340</span>
+              </div>
+
+              <!-- Map Simulation Container -->
+              <div id="map-container-element" class="relative aspect-[16/9] bg-stone-950 border border-stone-800 overflow-hidden flex items-center justify-center group">
+                <img
+                  src="images/properties/property-16.jpg"
+                  alt="Referencia de mapa de Beverly Hills"
+                  class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700"
+                />
+                <div class="absolute inset-0 bg-stone-950/60"></div>
+                <div class="relative z-10 text-center space-y-2 p-4">
+                  <div class="w-10 h-10 rounded-full bg-amber-700/90 text-white flex items-center justify-center mx-auto shadow-lg">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <p class="text-xs text-white font-medium">100 Luxury Blvd, Beverly Hills</p>
+                  <p class="text-[10px] text-stone-400 font-light">34.0736° N, 118.4004° W</p>
+                </div>
+              </div>
+
+              <div class="text-[11px] text-stone-400 font-light leading-relaxed flex items-center justify-between">
+                <span>Servicio de valet y estacionamiento subterráneo seguro</span>
+                <span class="text-amber-400">Con cita previa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-950 text-stone-300 pt-16 pb-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-stone-800">
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="inline-flex items-center gap-3">
+            <div class="w-9 h-9 border border-amber-400 flex items-center justify-center bg-stone-900">
+              <span class="font-brand font-bold text-amber-400 text-base">EN</span>
+            </div>
+            <div>
+              <span class="font-brand text-xl font-bold tracking-[0.2em] text-white uppercase block">EstateNova</span>
+              <span class="text-[8px] uppercase tracking-[0.3em] text-stone-400 font-light block">Bienes Raíces de Lujo</span>
+            </div>
+          </a>
+          <p class="text-xs text-stone-400 font-light leading-relaxed">
+            Representamos residencias arquitectónicas de lujo, penthouses modernos y propiedades privadas en los destinos más codiciados del mundo.
+          </p>
+          <div class="pt-2 text-xs text-stone-400">
+            <p>Licencia inmobiliaria: <strong class="text-stone-300 font-normal">DRE #01928340</strong></p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 space-y-3">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-amber-400 font-semibold block">Portafolio</span>
+          <ul class="space-y-2 text-xs font-light">
+            <li><a href="properties.html" class="hover:text-white transition-colors">Todas las propiedades</a></li>
+            <li><a href="properties.html?status=for-sale" class="hover:text-white transition-colors">Propiedades en venta</a></li>
+            <li><a href="properties.html?status=for-rent" class="hover:text-white transition-colors">Alquileres de lujo</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Nuestros servicios</a></li>
+            <li><a href="agents.html" class="hover:text-white transition-colors">Asesores privados</a></li>
+            <li><a href="favorites.html" class="hover:text-white transition-colors">Propiedades guardadas</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-amber-400 font-semibold block">Oficinas principales</span>
+          <ul class="space-y-2 text-xs font-light">
+            <li><span class="text-stone-200">Beverly Hills:</span> 100 Luxury Blvd, oficina 400</li>
+            <li><span class="text-stone-200">Manhattan:</span> 740 Madison Ave, piso 14</li>
+            <li><span class="text-stone-200">Miami Beach:</span> 1000 Venetian Way, oficina 800</li>
+            <li><span class="text-stone-200">Aspen:</span> 420 South Galena St, oficina 200</li>
+            <li class="pt-1"><a href="tel:+15550192834" class="text-amber-400 hover:text-amber-300">+1 (555) 019-2834</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-amber-400 font-semibold block">Revista Monograph</span>
+          <p class="text-xs text-stone-400 font-light leading-relaxed">
+            Recibe análisis trimestral del mercado y propiedades exclusivas fuera de mercado reservadas para compradores acreditados.
+          </p>
+          <form onsubmit="event.preventDefault(); showToast('Te suscribiste a la revista Monograph.', 'check'); this.reset();" class="space-y-2">
+            <input type="email" placeholder="Correo electrónico privado" required class="w-full bg-stone-900 border border-stone-800 text-white text-xs px-3 py-2.5 focus:outline-none focus:border-amber-500 font-light" />
+            <button type="submit" class="w-full bg-amber-700 hover:bg-amber-600 text-white text-xs uppercase tracking-wider py-2 transition-colors font-medium">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-stone-400 gap-4">
+        <p>&copy; 2026 EstateNova Luxury Real Estate LLC. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-6 text-[11px] uppercase tracking-wider">
+          <a href="about.html" class="hover:text-stone-200 transition-colors">Igualdad de oportunidades de vivienda</a>
+          <a href="contact.html" class="text-stone-200">Términos y privacidad</a>
+          <a href="agents.html" class="hover:text-stone-200 transition-colors">Equipo de asesores</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAVORITES DRAWER OVERLAY -->
+  <div id="favorites-drawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div class="drawer-backdrop absolute inset-0 bg-stone-950/70 backdrop-blur-sm"></div>
+    <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="drawer-panel w-screen max-w-md bg-stone-50 border-l border-stone-200 shadow-2xl flex flex-col translate-x-full transition-transform duration-300">
+        <div class="p-6 bg-stone-900 text-white flex items-center justify-between border-b border-stone-800">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <h3 class="font-serif text-lg text-white font-medium">Propiedades guardadas <span class="favorites-text-count">(0)</span></h3>
+          </div>
+          <button type="button" id="close-favorites-drawer-btn" class="p-1 text-stone-400 hover:text-white transition-colors cursor-pointer">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+
+        <div id="drawer-favorites-list" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+
+        <div id="drawer-favorites-empty" class="flex-1 flex flex-col items-center justify-center p-6 text-center text-stone-500">
+          <div class="w-12 h-12 rounded-full border border-stone-300 flex items-center justify-center text-stone-400 mb-3">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <p class="font-serif text-stone-900 text-base mb-1">No hay propiedades guardadas</p>
+          <p class="text-xs font-light max-w-xs">Pulsa el corazón de cualquier propiedad para añadirla a tu lista privada.</p>
+        </div>
+
+        <div id="drawer-favorites-footer" class="p-6 bg-white border-t border-stone-200 space-y-3">
+          <a href="favorites.html" class="block w-full py-2.5 bg-amber-700 hover:bg-amber-600 text-white text-xs uppercase tracking-wider font-medium text-center transition-colors">
+            Ver todas las propiedades guardadas
+          </a>
+          <button type="button" id="clear-drawer-favorites-btn" class="w-full text-center text-xs text-stone-500 hover:text-stone-900 uppercase tracking-wider transition-colors cursor-pointer">
+            Vaciar lista
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE VIEWING MODAL -->
+  <div id="schedule-viewing-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div class="modal-backdrop absolute inset-0 bg-stone-950/80 backdrop-blur-sm"></div>
+    <div class="relative bg-white border border-stone-200 shadow-2xl max-w-lg w-full p-6 sm:p-8 z-10 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between mb-6 pb-4 border-b border-stone-100">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-amber-800 font-semibold block">Itinerario confidencial</span>
+          <h3 class="font-serif text-2xl text-stone-900 font-normal mt-0.5">Programar visita privada</h3>
+        </div>
+        <button type="button" id="close-schedule-modal-btn" class="text-stone-400 hover:text-stone-900 cursor-pointer">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <form id="schedule-viewing-form" class="space-y-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Propiedad seleccionada</label>
+          <select name="property_select" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700"></select>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Fecha de visita *</label>
+            <input type="date" name="viewing_date" required class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Horario preferido</label>
+            <select name="viewing_time" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700">
+              <option value="morning">Mañana (10:00 – 12:00)</option>
+              <option value="afternoon">Tarde (13:00 – 16:00)</option>
+              <option value="sunset">Atardecer (17:00 – 19:00)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Nombre legal completo *</label>
+          <input type="text" name="client_name" required placeholder="Nombre legal completo o razón social" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Correo electrónico *</label>
+            <input type="email" name="client_email" required placeholder="nombre@dominio.com" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-stone-600 font-medium mb-1.5">Teléfono *</label>
+            <input type="tel" name="client_phone" required placeholder="+1 (555) 000-0000" class="w-full bg-stone-50 border border-stone-200 text-stone-900 px-3 py-2 text-xs font-light focus:outline-none focus:border-amber-700" />
+          </div>
+        </div>
+        <button type="submit" class="w-full py-3 bg-stone-900 hover:bg-amber-700 text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors">
+          Enviar solicitud de visita
+        </button>
+      </form>
+
+      <div id="schedule-modal-success" class="hidden text-center py-6 space-y-4">
+        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h4 class="font-serif text-xl text-stone-900">Solicitud de visita recibida</h4>
+        <p class="text-xs text-stone-600 font-light max-w-sm mx-auto leading-relaxed">
+          Tu consulta privada fue asignada directamente a nuestro socio director. Confirmaremos la autorización de seguridad en un plazo de 4 horas.
+        </p>
+        <button type="button" id="schedule-modal-reset-btn" class="px-6 py-2 bg-stone-900 text-white text-xs uppercase tracking-wider">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-50 lg:hidden">
+    <div class="absolute inset-0 bg-stone-950/80 backdrop-blur-md"></div>
+    <div class="relative w-full max-w-sm bg-stone-950 h-full p-6 text-white flex flex-col justify-between overflow-y-auto border-r border-stone-800">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-stone-800">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 border border-amber-400 flex items-center justify-center bg-stone-900">
+              <span class="font-brand font-bold text-amber-400 text-sm">EN</span>
+            </div>
+            <span class="font-brand font-bold tracking-[0.2em] text-sm uppercase text-white">EstateNova</span>
+          </div>
+          <button type="button" id="mobile-menu-close-btn" class="p-2 text-stone-400 hover:text-white cursor-pointer">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+
+        <nav class="py-6 space-y-4 text-sm font-medium uppercase tracking-[0.15em]">
+          <a href="index.html" class="block text-stone-300 hover:text-white py-1">Inicio</a>
+          <a href="properties.html" class="block text-stone-300 hover:text-white py-1">Propiedades</a>
+          <a href="services.html" class="block text-stone-300 hover:text-white py-1">Servicios</a>
+          <a href="agents.html" class="block text-stone-300 hover:text-white py-1">Asesores privados</a>
+          <a href="about.html" class="block text-stone-300 hover:text-white py-1">Nosotros</a>
+          <a href="contact.html" class="block text-amber-400 py-1">Contacto y salones</a>
+          <a href="favorites.html" class="block text-stone-300 hover:text-white py-1">Propiedades guardadas <span class="favorites-text-count text-amber-400">(0)</span></a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-stone-800 space-y-4">
+        <a href="tel:+15550192834" class="text-xs text-stone-300 block tracking-wider">Línea directa: +1 (555) 019-2834</a>
+        <button type="button" class="open-schedule-modal-btn w-full py-3 bg-amber-700 hover:bg-amber-600 text-white text-xs uppercase tracking-[0.2em] font-medium transition-colors">
+          Programar visita
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
