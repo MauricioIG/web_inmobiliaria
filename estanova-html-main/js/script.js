@@ -1,5 +1,5 @@
 /**
- * EstateNova – Luxury Real Estate Template
+ * Propertis Orbanta – Luxury Real Estate Template
  * Standalone Vanilla JavaScript Controller
  */
 
@@ -143,15 +143,15 @@ function updateHeartButtons() {
     const heartSvg = btn.querySelector('svg');
     if (heartSvg) {
       if (isFav) {
-        heartSvg.setAttribute('fill', '#b45309');
+        heartSvg.setAttribute('fill', '#9a7430');
         heartSvg.classList.add('text-amber-700');
         heartSvg.classList.remove('text-stone-700');
-        btn.setAttribute('title', 'Remove from saved shortlist');
+        btn.setAttribute('title', 'Quitar de guardadas');
       } else {
         heartSvg.setAttribute('fill', 'none');
         heartSvg.classList.remove('text-amber-700');
         heartSvg.classList.add('text-stone-700');
-        btn.setAttribute('title', 'Save to private shortlist');
+        btn.setAttribute('title', 'Guardar en mi lista privada');
       }
     }
   });
@@ -235,7 +235,7 @@ function initFavoritesDrawer() {
   if (clearBtn) {
     clearBtn.addEventListener('click', () => {
       FavoritesStore.clear();
-      showToast('Shortlist cleared', 'info');
+      showToast('Lista de guardadas vaciada', 'info');
     });
   }
 }
@@ -304,7 +304,7 @@ function renderDrawerFavorites() {
             <a href="property-details.html?id=${p.id}" class="font-serif text-sm font-normal text-stone-900 hover:text-amber-800 line-clamp-1 transition-colors">
               ${p.title}
             </a>
-            <button type="button" class="text-stone-400 hover:text-rose-600 transition-colors cursor-pointer" onclick="FavoritesStore.remove('${p.id}'); showToast('Removed from shortlist', 'heart');">
+            <button type="button" class="text-stone-400 hover:text-rose-600 transition-colors cursor-pointer" onclick="FavoritesStore.remove('${p.id}'); showToast('Quitada de guardadas', 'heart');">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
           </div>
@@ -366,7 +366,7 @@ function initScheduleModal() {
       const date = form.querySelector('[name="viewing_date"]')?.value;
 
       if (!name || !email || !phone || !date) {
-        showToast('Please complete all required fields.', 'info');
+        showToast('Por favor completa todos los campos obligatorios.', 'info');
         return;
       }
 
@@ -386,7 +386,7 @@ function initScheduleModal() {
         submitBtn.innerHTML = originalText;
         form.classList.add('hidden');
         if (successState) successState.classList.remove('hidden');
-        showToast('Viewing request submitted successfully.', 'check');
+        showToast('Solicitud de visita enviada con éxito.', 'check');
       }, 900);
     });
   }
@@ -483,7 +483,7 @@ function initContactAgentModal() {
       const phone = form.querySelector('[name="agent_client_phone"]')?.value.trim();
 
       if (!name || !email || !phone) {
-        showToast('Please fill out all required fields.', 'info');
+        showToast('Por favor completa todos los campos obligatorios.', 'info');
         return;
       }
 
@@ -503,7 +503,7 @@ function initContactAgentModal() {
         submitBtn.innerHTML = originalText;
         form.classList.add('hidden');
         if (successState) successState.classList.remove('hidden');
-        showToast('Message transmitted directly to advisor desk.', 'check');
+        showToast('Mensaje enviado directamente al asesor.', 'check');
       }, 800);
     });
   }
@@ -602,29 +602,43 @@ function initAccordions() {
 }
 
 // --- PROPERTY CARD GENERATOR ---
+const PROPERTY_TYPE_LABELS = {
+  'Modern Mansion': 'Mansión moderna',
+  'Modernist Villa': 'Villa modernista',
+  'Penthouse': 'Penthouse',
+  'Trophy Penthouse': 'Penthouse exclusivo',
+  'Oceanfront Sanctuary': 'Refugio frente al río',
+  'Waterfront Compound': 'Complejo frente al río',
+  'Alpine Chalet': 'Chalet de montaña',
+  'Historic Loft': 'Loft histórico',
+  'Coastal Modern': 'Moderna costera',
+  'Hotel Residence': 'Residencia en hotel'
+};
+const propertyTypeLabel = (type) => PROPERTY_TYPE_LABELS[type] || type;
+
 function createPropertyCardHtml(p, viewMode = 'grid') {
   if (!p) return '';
   const isFav = FavoritesStore.has(p.id);
   const image = p.heroImage || p.image || (p.images && p.images[0]) || 'images/properties/property-01';
   const area = p.squareFeet || p.area || 0;
   const address = p.address || p.location || '';
-  const city = p.city || 'Exclusive';
+  const city = p.city || 'Exclusiva';
   const price = typeof p.price === 'number' ? p.price : 0;
-  const formattedPrice = p.formattedPrice || (price > 0 ? `$${price.toLocaleString()}` : 'Price on Request');
+  const formattedPrice = p.formattedPrice || (price > 0 ? `$${price.toLocaleString()}` : 'Precio a consultar');
 
   let ppsfText = '';
   if (p.pricePerSqFt) {
-    ppsfText = `$${p.pricePerSqFt.toLocaleString()} / sq ft`;
+    ppsfText = `$${p.pricePerSqFt.toLocaleString()} / pie²`;
   } else if (p.status === 'for-sale' && area > 0 && price > 0) {
-    ppsfText = `$${Math.round(price / area).toLocaleString()} / sq ft`;
+    ppsfText = `$${Math.round(price / area).toLocaleString()} / pie²`;
   } else if (p.status === 'for-rent' && area > 0 && price > 0) {
-    ppsfText = `$${(price / area).toFixed(2)} / sq ft / mo`;
+    ppsfText = `$${(price / area).toFixed(2)} / pie² / mes`;
   } else {
-    ppsfText = 'Premier Offering';
+    ppsfText = 'Oferta exclusiva';
   }
 
   const agent = p.agent || (typeof getAgentById === 'function' ? getAgentById('agent-1') : {}) || {};
-  const agentName = agent.name || 'Private Advisor';
+  const agentName = agent.name || 'Asesor privado';
   const agentAvatar = agent.image || agent.avatar || 'images/agents/elena-rostova.jpg';
 
   if (viewMode === 'list') {
@@ -637,20 +651,20 @@ function createPropertyCardHtml(p, viewMode = 'grid') {
             <span class="text-[10px] tracking-[0.2em] uppercase font-semibold px-2.5 py-1 ${
               p.status === 'for-sale' ? 'bg-amber-700 text-white' : 'bg-emerald-800 text-white'
             }">
-              ${p.status === 'for-sale' ? 'For Sale' : 'Luxury Lease'}
+              ${p.status === 'for-sale' ? 'En venta' : 'Arriendo de lujo'}
             </span>
             <span class="text-[10px] tracking-[0.15em] uppercase font-medium px-2 py-0.5 bg-stone-900/85 text-stone-300 backdrop-blur-sm">
-              ${p.propertyType}
+              ${propertyTypeLabel(p.propertyType)}
             </span>
           </div>
           <button
             type="button"
             data-favorite-id="${p.id}"
             class="absolute top-4 right-4 w-9 h-9 rounded-full bg-stone-900/80 backdrop-blur-md border border-white/20 flex items-center justify-center transition-transform active:scale-90 hover:bg-white text-stone-200 hover:text-amber-700 cursor-pointer"
-            onclick="event.preventDefault(); const res = FavoritesStore.toggle('${p.id}'); showToast(res ? 'Saved to shortlist' : 'Removed from shortlist', 'heart');"
-            title="Save to shortlist"
+            onclick="event.preventDefault(); const res = FavoritesStore.toggle('${p.id}'); showToast(res ? 'Guardada en tu lista' : 'Quitada de guardadas', 'heart');"
+            title="Guardar en mi lista"
           >
-            <svg class="w-4 h-4 ${isFav ? 'text-amber-700 fill-amber-700' : 'text-stone-300'}" viewBox="0 0 24 24" fill="${isFav ? '#b45309' : 'none'}" stroke="currentColor" stroke-width="1.5">
+            <svg class="w-4 h-4 ${isFav ? 'text-amber-700 fill-amber-700' : 'text-stone-300'}" viewBox="0 0 24 24" fill="${isFav ? '#9a7430' : 'none'}" stroke="currentColor" stroke-width="1.5">
               <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
             </svg>
           </button>
@@ -673,15 +687,15 @@ function createPropertyCardHtml(p, viewMode = 'grid') {
             <div class="flex items-center gap-6 py-3 border-y border-stone-100 text-xs text-stone-700 font-light">
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
-                <strong class="font-medium text-stone-900">${p.bedrooms}</strong> Beds
+                <strong class="font-medium text-stone-900">${p.bedrooms}</strong> Hab.
               </span>
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-1.5C3.7 2 2 3.7 2 5.5v13a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-11Z"/><path d="M14 6h4"/></svg>
-                <strong class="font-medium text-stone-900">${p.bathrooms}</strong> Baths
+                <strong class="font-medium text-stone-900">${p.bathrooms}</strong> Baños
               </span>
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h6v6"/><path d="m21 3-7 7"/><path d="M9 21H3v-6"/><path d="m3 21 7-7"/></svg>
-                <strong class="font-medium text-stone-900">${area.toLocaleString()}</strong> Sq Ft
+                <strong class="font-medium text-stone-900">${area.toLocaleString()}</strong> pies²
               </span>
               <span class="hidden sm:inline text-stone-400">•</span>
               <span class="hidden sm:inline text-stone-500 font-light">Built ${p.yearBuilt}</span>
@@ -716,20 +730,20 @@ function createPropertyCardHtml(p, viewMode = 'grid') {
           <span class="text-[10px] tracking-[0.2em] uppercase font-semibold px-2.5 py-1 ${
             p.status === 'for-sale' ? 'bg-amber-700 text-white' : 'bg-emerald-800 text-white'
           }">
-            ${p.status === 'for-sale' ? 'For Sale' : 'Luxury Lease'}
+            ${p.status === 'for-sale' ? 'En venta' : 'Arriendo de lujo'}
           </span>
           <span class="text-[10px] tracking-[0.15em] uppercase font-medium px-2 py-0.5 bg-stone-900/85 text-stone-300 backdrop-blur-sm">
-            ${p.propertyType}
+            ${propertyTypeLabel(p.propertyType)}
           </span>
         </div>
         <button
           type="button"
           data-favorite-id="${p.id}"
           class="absolute top-4 right-4 w-9 h-9 rounded-full bg-stone-900/80 backdrop-blur-md border border-white/20 flex items-center justify-center transition-transform active:scale-90 hover:bg-white text-stone-200 hover:text-amber-700 cursor-pointer"
-          onclick="event.preventDefault(); const res = FavoritesStore.toggle('${p.id}'); showToast(res ? 'Saved to shortlist' : 'Removed from shortlist', 'heart');"
-          title="Save to shortlist"
+          onclick="event.preventDefault(); const res = FavoritesStore.toggle('${p.id}'); showToast(res ? 'Guardada en tu lista' : 'Quitada de guardadas', 'heart');"
+          title="Guardar en mi lista"
         >
-          <svg class="w-4 h-4 ${isFav ? 'text-amber-700 fill-amber-700' : 'text-stone-300'}" viewBox="0 0 24 24" fill="${isFav ? '#b45309' : 'none'}" stroke="currentColor" stroke-width="1.5">
+          <svg class="w-4 h-4 ${isFav ? 'text-amber-700 fill-amber-700' : 'text-stone-300'}" viewBox="0 0 24 24" fill="${isFav ? '#9a7430' : 'none'}" stroke="currentColor" stroke-width="1.5">
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
           </svg>
         </button>
@@ -755,15 +769,15 @@ function createPropertyCardHtml(p, viewMode = 'grid') {
           <div class="grid grid-cols-3 gap-2 py-3 border-y border-stone-100 text-xs text-stone-700 font-light text-center">
             <div>
               <span class="block font-medium text-stone-900">${p.bedrooms}</span>
-              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Beds</span>
+              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Hab.</span>
             </div>
             <div class="border-x border-stone-100">
               <span class="block font-medium text-stone-900">${p.bathrooms}</span>
-              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Baths</span>
+              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Baños</span>
             </div>
             <div>
               <span class="block font-medium text-stone-900">${area.toLocaleString()}</span>
-              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Sq Ft</span>
+              <span class="text-[10px] text-stone-400 uppercase tracking-wider">Pies²</span>
             </div>
           </div>
           <div class="mt-4 flex items-center justify-between gap-2">
@@ -771,7 +785,7 @@ function createPropertyCardHtml(p, viewMode = 'grid') {
               Schedule Tour
             </button>
             <a href="property-details.html?id=${p.id}" class="text-[11px] text-amber-800 hover:text-amber-950 font-medium tracking-wider uppercase inline-flex items-center gap-1 group/link">
-              <span>View Estate</span>
+              <span>Ver propiedad</span>
               <span class="group-hover/link:translate-x-0.5 transition-transform">&rarr;</span>
             </a>
           </div>
@@ -844,12 +858,10 @@ function initPropertiesPage() {
       // Location
       if (loc !== 'all') {
         const locLower = loc.toLowerCase();
-        const cityMatch = pCity.includes(locLower) || locLower.includes(pCity);
-        const locMatch = pLocation.includes(locLower) || locLower.includes(pLocation);
+        const cityMatch = pCity.includes(locLower) || (pCity && locLower.includes(pCity));
+        const locMatch = pLocation.includes(locLower) || (pLocation && locLower.includes(pLocation));
         const addressMatch = pAddress.includes(locLower);
-        // If searching Manhattan, also match New York
-        const manhattanMatch = (locLower === 'manhattan' && (pCity.includes('new york') || pAddress.includes('tribeca') || pAddress.includes('columbus circle')));
-        if (!cityMatch && !locMatch && !addressMatch && !manhattanMatch) {
+        if (!cityMatch && !locMatch && !addressMatch) {
           return false;
         }
       }
@@ -892,7 +904,7 @@ function initPropertiesPage() {
 
     // Render count
     if (countDisplay) {
-      countDisplay.textContent = `Showing ${filtered.length} of ${propertiesList.length} estates`;
+      countDisplay.textContent = `Mostrando ${filtered.length} de ${propertiesList.length} propiedades`;
     }
 
     // Render cards
@@ -971,7 +983,7 @@ function initPropertyDetailsPage() {
 
   const brandName = (window.CONFIG && window.CONFIG.brand && window.CONFIG.brand.name) ||
                     (window.SITE_CONFIG && window.SITE_CONFIG.brand && window.SITE_CONFIG.brand.name) ||
-                    'EstateNova';
+                    'Propertis Orbanta';
   document.title = `${property.title} | ${brandName}`;
 
   // Breadcrumb
@@ -988,28 +1000,28 @@ function initPropertyDetailsPage() {
 
   if (titleEl) titleEl.textContent = property.title;
   if (addressEl) addressEl.textContent = `${property.address || property.location || ''}, ${property.city || ''}, ${property.state || ''} ${property.zipCode || ''}`;
-  if (priceEl) priceEl.textContent = property.formattedPrice || (property.price ? `$${property.price.toLocaleString()}` : 'Price on Request');
+  if (priceEl) priceEl.textContent = property.formattedPrice || (property.price ? `$${property.price.toLocaleString()}` : 'Precio a consultar');
 
   const area = property.squareFeet || property.area || 0;
   if (ppsfEl) {
     if (property.pricePerSqFt) {
-      ppsfEl.textContent = `$${property.pricePerSqFt.toLocaleString()} / sq ft`;
+      ppsfEl.textContent = `$${property.pricePerSqFt.toLocaleString()} / pie²`;
     } else if (property.status === 'for-sale' && area > 0 && property.price) {
-      ppsfEl.textContent = `$${Math.round(property.price / area).toLocaleString()} / sq ft`;
+      ppsfEl.textContent = `$${Math.round(property.price / area).toLocaleString()} / pie²`;
     } else if (property.status === 'for-rent' && area > 0 && property.price) {
-      ppsfEl.textContent = `$${(property.price / area).toFixed(2)} / sq ft / mo`;
+      ppsfEl.textContent = `$${(property.price / area).toFixed(2)} / pie² / mes`;
     } else {
-      ppsfEl.textContent = 'Premier Offering';
+      ppsfEl.textContent = 'Oferta exclusiva';
     }
   }
 
   if (statusBadge) {
-    statusBadge.textContent = property.status === 'for-sale' ? 'For Sale' : 'Luxury Lease';
+    statusBadge.textContent = property.status === 'for-sale' ? 'En venta' : 'Arriendo de lujo';
     statusBadge.className = `px-3 py-1 text-xs uppercase tracking-[0.2em] font-semibold ${
       property.status === 'for-sale' ? 'bg-amber-700 text-white' : 'bg-emerald-800 text-white'
     }`;
   }
-  if (typeBadge) typeBadge.textContent = property.propertyType || 'Generational Estate';
+  if (typeBadge) typeBadge.textContent = propertyTypeLabel(property.propertyType) || 'Propiedad patrimonial';
 
   // Action buttons
   const favBtn = document.getElementById('property-detail-fav-btn');
@@ -1018,7 +1030,7 @@ function initPropertyDetailsPage() {
     favBtn.addEventListener('click', (e) => {
       e.preventDefault();
       const res = FavoritesStore.toggle(property.id);
-      showToast(res ? 'Saved to private shortlist' : 'Removed from shortlist', 'heart');
+      showToast(res ? 'Guardada en tu lista privada' : 'Quitada de guardadas', 'heart');
     });
   }
 
@@ -1028,9 +1040,9 @@ function initPropertyDetailsPage() {
       e.preventDefault();
       if (navigator.clipboard) {
         navigator.clipboard.writeText(window.location.href);
-        showToast('Residence link copied to clipboard', 'check');
+        showToast('Enlace de la propiedad copiado', 'check');
       } else {
-        showToast('Direct URL: ' + window.location.href, 'info');
+        showToast('Enlace directo: ' + window.location.href, 'info');
       }
     });
   }
@@ -1088,8 +1100,8 @@ function initPropertyDetailsPage() {
 
   if (bedsEl) bedsEl.textContent = property.bedrooms || '-';
   if (bathsEl) bathsEl.textContent = property.bathrooms || '-';
-  if (areaEl) areaEl.textContent = `${area.toLocaleString()} Sq Ft`;
-  if (lotEl) lotEl.textContent = property.lotSize || 'Private Grounds';
+  if (areaEl) areaEl.textContent = `${area.toLocaleString()} pies²`;
+  if (lotEl) lotEl.textContent = property.lotSize || 'Terreno privado';
   if (yearEl) yearEl.textContent = property.yearBuilt || 'Recent';
   if (garageEl) garageEl.textContent = property.garageSpaces ? `${property.garageSpaces} Cars` : 'Private Motor Court';
 
@@ -1144,7 +1156,7 @@ function initPropertyDetailsPage() {
 
   if (agentAvatar) agentAvatar.src = agent.image || agent.avatar || 'images/agents/elena-rostova.jpg';
   if (agentName) agentName.textContent = agent.name || 'Senior Managing Partner';
-  if (agentTitle) agentTitle.textContent = agent.title || 'Private Client Advisory';
+  if (agentTitle) agentTitle.textContent = agent.title || 'Asesoría a clientes privados';
   if (agentRating) agentRating.textContent = `★ ${agent.rating || '5.0'}`;
   if (agentSales) agentSales.textContent = agent.totalSales || agent.salesVolume || '$150M+ Transacted';
   if (agentPhone && agent.phone) {
@@ -1170,20 +1182,20 @@ function initPropertyDetailsPage() {
       const date = tourForm.querySelector('[name="tour_date"]')?.value;
 
       if (!name || !email || !phone || !date) {
-        showToast('Please fill out all viewing fields.', 'info');
+        showToast('Por favor completa todos los campos de la visita.', 'info');
         return;
       }
 
       const submitBtn = tourForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Submitting Request...';
+      submitBtn.innerHTML = 'Enviando solicitud...';
 
       setTimeout(() => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
         tourForm.reset();
-        showToast('Showing request submitted to ' + (agent.name || 'Advisor Desk'), 'check');
+        showToast('Solicitud de visita enviada a ' + (agent.name || 'nuestro asesor'), 'check');
       }, 700);
     });
   }
@@ -1212,7 +1224,7 @@ function renderFavoritesPage() {
   const properties = (window.PROPERTIES_DATA || []).filter((p) => favIds.includes(p.id));
 
   if (headerCount) {
-    headerCount.textContent = `${properties.length} ${properties.length === 1 ? 'Estate' : 'Estates'} Saved`;
+    headerCount.textContent = `${properties.length} ${properties.length === 1 ? 'Propiedad' : 'Propiedades'} guardada(s)`;
   }
 
   if (properties.length === 0) {
@@ -1233,7 +1245,7 @@ function renderFavoritesPage() {
   if (clearBtn) {
     clearBtn.onclick = () => {
       FavoritesStore.clear();
-      showToast('All saved residences cleared', 'info');
+      showToast('Se vaciaron todas las propiedades guardadas', 'info');
       renderFavoritesPage();
     };
   }
@@ -1423,7 +1435,7 @@ function initContactPage() {
     }
 
     if (hasError) {
-      showToast('Please correct the highlighted required fields.', 'info');
+      showToast('Por favor corrige los campos obligatorios marcados.', 'info');
       return;
     }
 
@@ -1448,7 +1460,7 @@ function initContactPage() {
       form.reset();
       form.classList.add('hidden');
       if (successState) successState.classList.remove('hidden');
-      showToast('Thank you. Your inquiry has been received successfully.', 'check');
+      showToast('Gracias. Tu consulta fue recibida con éxito.', 'check');
     }, 500);
   });
 

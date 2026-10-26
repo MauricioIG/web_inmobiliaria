@@ -1,6 +1,6 @@
 /**
  * ==============================================================================
- * EstateNova – Global Site Configuration (js/config.js)
+ * Propertis Orbanta – Global Site Configuration (js/config.js)
  * ==============================================================================
  * 
  * Commercial Template Buyers:
@@ -17,34 +17,34 @@ const CONFIG = {
   // BRAND & BROKERAGE IDENTITY
   // ----------------------------------------------------------------------------
   brand: {
-    name: "EstateNova",
-    legalName: "EstateNova Luxury Real Estate LLC",
+    name: "Propertis Orbanta",
+    legalName: "Propertis Orbanta Bienes Raíces de Lujo",
     logoText: "EN",                         // 2-character monogram displayed in logo badge
     logoImage: "images/logo.svg",           // Path to your custom image logo (optional)
     favicon: "images/favicon.svg",
-    tagline: "Architectural Elegance & Premier Luxury Living",
-    shortDescription: "Curating the world's most distinctive residences, coastal estates, and modern architectural sanctuaries for discerning clientele.",
+    tagline: "Elegancia arquitectónica y vida de lujo excepcional",
+    shortDescription: "Seleccionamos las residencias más distinguidas, propiedades costeras y refugios arquitectónicos modernos para una clientela exigente.",
     foundedYear: 2014,
-    licenseNumber: "DRE #01948201",         // Real estate brokerage license number
-    brokerageName: "EstateNova Private Client Advisory",
+    licenseNumber: "RUC 1790000000001",         // Real estate brokerage license number
+    brokerageName: "Propertis Orbanta Private Client Advisory",
   },
 
   // ----------------------------------------------------------------------------
   // PRIMARY CONTACT DETAILS
   // ----------------------------------------------------------------------------
   contact: {
-    phone: "+1 (555) 019-2834",
-    phoneDisplay: "+1 (555) 019-2834",
-    directPhone: "+1 (555) 019-2835",
+    phone: "+593 990095013",
+    phoneDisplay: "+593 990095013",
+    directPhone: "+593 990095020",
     email: "info@example.com",
     salesEmail: "inquiries@example.com",
     pressEmail: "press@example.com",
-    address: "100 Luxury Boulevard, Suite 400",
-    city: "Beverly Hills",
-    state: "CA",
-    zipCode: "90210",
-    country: "United States",
-    officeHours: "Monday – Saturday: 9:00 AM – 6:00 PM | Sunday: By Appointment",
+    address: "Av. República de El Salvador N36-84 y Naciones Unidas, oficina 400",
+    city: "Quito",
+    state: "Pichincha",
+    zipCode: "170135",
+    country: "Ecuador",
+    officeHours: "Lunes a sábado: 9:00 – 18:00 | Domingo: con cita previa",
     
     // MAP INTEGRATION:
     // To display a live interactive Google Map on contact.html, paste your embed iframe URL here:
@@ -59,47 +59,47 @@ const CONFIG = {
   // ----------------------------------------------------------------------------
   offices: [
     {
-      city: "Beverly Hills",
-      tagline: "Global Headquarters",
-      address: "100 Luxury Boulevard, Suite 400",
-      cityStateZip: "Beverly Hills, CA 90210",
-      phone: "+1 (555) 019-2834",
-      email: "beverlyhills@example.com",
-      hours: "Mon – Sat: 9am – 6pm",
-      coordinates: "34.0736° N, 118.4004° W",
+      city: "Quito",
+      tagline: "Sede principal",
+      address: "Av. República de El Salvador N36-84 y Naciones Unidas, oficina 400",
+      cityStateZip: "Quito, Pichincha 170135",
+      phone: "+593 990095010",
+      email: "quito@example.com",
+      hours: "Lun – Sáb: 9:00 – 18:00",
+      coordinates: "0.1807° S, 78.4678° W",
       isHeadquarters: true,
     },
     {
-      city: "Manhattan",
-      tagline: "Metropolis Salon",
-      address: "740 Madison Avenue, Floor 14",
-      cityStateZip: "New York, NY 10065",
-      phone: "+1 (555) 019-2835",
-      email: "manhattan@example.com",
-      hours: "Mon – Fri: 9am – 6pm",
-      coordinates: "40.7661° N, 73.9691° W",
+      city: "Guayaquil",
+      tagline: "Salón Guayaquil",
+      address: "Av. Francisco de Orellana y Justino Cornejo, piso 14",
+      cityStateZip: "Guayaquil, Guayas 090505",
+      phone: "+593 990095020",
+      email: "guayaquil@example.com",
+      hours: "Lun – Vie: 9:00 – 18:00",
+      coordinates: "2.1709° S, 79.9224° W",
       isHeadquarters: false,
     },
     {
-      city: "Miami Beach",
-      tagline: "Maritime & Island Desk",
-      address: "1000 Venetian Way, Suite 800",
-      cityStateZip: "Miami Beach, FL 33139",
-      phone: "+1 (555) 019-2836",
-      email: "miami@example.com",
-      hours: "Mon – Sat: 9am – 6pm",
-      coordinates: "25.7907° N, 80.1770° W",
+      city: "Cuenca",
+      tagline: "Oficina Cuenca y Austro",
+      address: "Av. Ordóñez Lasso y Av. de las Américas, oficina 800",
+      cityStateZip: "Cuenca, Azuay 010107",
+      phone: "+593 990095021",
+      email: "cuenca@example.com",
+      hours: "Lun – Sáb: 9:00 – 18:00",
+      coordinates: "2.9001° S, 79.0059° W",
       isHeadquarters: false,
     },
     {
-      city: "Aspen",
-      tagline: "Alpine & Mountain Desk",
-      address: "420 South Galena Street, Suite 200",
-      cityStateZip: "Aspen, CO 81611",
-      phone: "+1 (555) 019-2837",
-      email: "aspen@example.com",
-      hours: "Daily: 9am – 5pm",
-      coordinates: "39.1911° N, 106.8175° W",
+      city: "Ambato",
+      tagline: "Oficina Ambato y Sierra central",
+      address: "Av. Los Chasquis y Rodrigo Pachano, oficina 200",
+      cityStateZip: "Ambato, Tungurahua 180150",
+      phone: "+593 990095022",
+      email: "ambato@example.com",
+      hours: "Todos los días: 9:00 – 17:00",
+      coordinates: "1.2417° S, 78.6267° W",
       isHeadquarters: false,
     }
   ],
@@ -124,12 +124,12 @@ const CONFIG = {
   // SEARCH ENGINE OPTIMIZATION (SEO) DEFAULTS
   // ----------------------------------------------------------------------------
   seo: {
-    defaultTitle: "EstateNova | Luxury Real Estate & Private Architectural Estates",
-    titleTemplate: "%s | EstateNova Luxury Real Estate",
-    defaultDescription: "Representing premier luxury architectural residences, modern penthouses, and private estates across the world's most coveted destinations.",
-    defaultKeywords: "luxury real estate, architectural homes, modern villas, private estates, penthouses, Beverly Hills luxury homes, Manhattan penthouses",
+    defaultTitle: "Propertis Orbanta | Bienes Raíces de Lujo y Propiedades Arquitectónicas Exclusivas",
+    titleTemplate: "%s | Propertis Orbanta Bienes Raíces de Lujo",
+    defaultDescription: "Representamos residencias arquitectónicas de lujo, penthouses modernos y propiedades privadas en los destinos más codiciados del mundo.",
+    defaultKeywords: "bienes raíces de lujo, casas arquitectónicas, villas modernas, propiedades privadas, penthouses, casas de lujo en Quito, penthouses en Guayaquil, propiedades en Cuenca y Ambato",
     ogImage: "images/properties/property-01.jpg",
-    author: "EstateNova Luxury Real Estate LLC",
+    author: "Propertis Orbanta Bienes Raíces de Lujo",
   },
 
   // ----------------------------------------------------------------------------
@@ -138,13 +138,13 @@ const CONFIG = {
   // Modify these hex codes to adjust the theme accent colors across the template.
   // The JavaScript controller automatically syncs these values with CSS variables.
   theme: {
-    accentColor: "#b45309",        // Primary warm gold / amber accent (buttons, badges)
-    accentHover: "#d97706",        // Accent hover state
-    accentGold: "#fbbf24",         // Monogram & badge bright gold
-    primaryDark: "#0c0a09",        // Obsidian dark background / stone 950
-    secondaryDark: "#1c1917",      // Dark surface / stone 900
+    accentColor: "#9a7430",        // Primary warm gold / amber accent (buttons, badges)
+    accentHover: "#b08a3e",        // Accent hover state
+    accentGold: "#d9b872",         // Monogram & badge bright gold
+    primaryDark: "#0b1f33",        // Obsidian dark background / stone 950
+    secondaryDark: "#0f2a43",      // Dark surface / stone 900
     bgLight: "#fafaf9",            // Light background / stone 50
-    textDark: "#1c1917",           // Dark text
+    textDark: "#0f2a43",           // Dark text
     textLight: "#f5f5f4",          // Light text
     fontBrand: "'Cinzel', serif",
     fontSerif: "'Playfair Display', Georgia, serif",
@@ -155,10 +155,10 @@ const CONFIG = {
   // FOOTER CONTENT
   // ----------------------------------------------------------------------------
   footer: {
-    newsletterTitle: "The Monograph Journal",
-    newsletterSubtitle: "Receive quarterly market intelligence and prime off-market listings reserved for accredited buyers.",
-    copyrightText: "© 2026 EstateNova Luxury Real Estate LLC. All rights reserved.",
-    complianceNotice: "Equal Housing Opportunity. All material presented herein is intended for information purposes only.",
+    newsletterTitle: "El Diario Monograph",
+    newsletterSubtitle: "Recibe cada trimestre análisis de mercado y propiedades exclusivas fuera de mercado reservadas para compradores acreditados.",
+    copyrightText: "© 2026 Propertis Orbanta Bienes Raíces de Lujo. Todos los derechos reservados.",
+    complianceNotice: "Todo el material presentado aquí es solo informativo.",
   }
 };
 

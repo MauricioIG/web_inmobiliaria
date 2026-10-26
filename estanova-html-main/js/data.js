@@ -1,6 +1,6 @@
 /**
  * ==============================================================================
- * EstateNova – Content & Business Data (js/data.js)
+ * Propertis Orbanta – Content & Business Data (js/data.js)
  * ==============================================================================
  * 
  * Commercial Template Buyers:
@@ -138,7 +138,7 @@ const TESTIMONIALS_DATA = [
     clientName: "Julian & Vivienne Sterling",
     role: "Founders, Sterling Capital Partners",
     location: "Beverly Hills, CA",
-    quote: "EstateNova handled our off-market purchase of the Bel-Air architectural villa with utmost precision. Their discretion, speed, and architectural appreciation set the benchmark.",
+    quote: "Propertis Orbanta handled our off-market purchase of the Bel-Air architectural villa with utmost precision. Their discretion, speed, and architectural appreciation set the benchmark.",
     rating: 5,
     avatar: "images/agents/elena-rostova.jpg",
     propertyPurchased: "The Ridgeview Residence, $18.5M"
@@ -148,7 +148,7 @@ const TESTIMONIALS_DATA = [
     clientName: "Dr. Marcus Vance",
     role: "Tech Executive & Philanthropist",
     location: "Miami Beach, FL",
-    quote: "Selling a $24M waterfront compound demands an agency that commands genuine respect among global buyers. EstateNova closed the sale in 28 days at 98% of ask.",
+    quote: "Selling a $24M waterfront compound demands an agency that commands genuine respect among global buyers. Propertis Orbanta closed the sale in 28 days at 98% of ask.",
     rating: 5,
     avatar: "images/agents/julian-montgomery.jpg",
     propertyPurchased: "Palmetto Point Waterfront, $23.8M"
@@ -158,7 +158,7 @@ const TESTIMONIALS_DATA = [
     clientName: "Elena Rostova",
     role: "Art Collector & Industrialist",
     location: "Manhattan, NY",
-    quote: "Finding a gallery-grade penthouse with 14-foot ceilings and private elevator access in Tribeca seemed impossible until the EstateNova team presented a private whisper listing.",
+    quote: "Finding a gallery-grade penthouse with 14-foot ceilings and private elevator access in Tribeca seemed impossible until the Propertis Orbanta team presented a private whisper listing.",
     rating: 5,
     avatar: "images/agents/elena-rostova.jpg",
     propertyPurchased: "Tribeca Sky Gallery Duplex, $14.2M"
@@ -198,21 +198,21 @@ const AGENTS_DATA = [
   {
     id: "agent-1",
     name: "Victoria Vance",
-    title: "Managing Director, Private Estates",
-    position: "Beverly Hills & Montecito Flagship",
-    bio: "With over 18 years specializing in legendary promontory estates, mid-century architectural icons, and off-market confidential sales, Victoria has consistently ranked among the region's premier luxury advisors.",
+    title: "Directora Gerente, Propiedades Privadas",
+    position: "Sede principal Quito y Cumbayá",
+    bio: "Con más de 18 años de especialización en propiedades legendarias, íconos arquitectónicos de mediados de siglo y ventas confidenciales fuera de mercado, Victoria se ha mantenido entre las principales asesoras de lujo de la región.",
     experienceYears: 18,
     propertiesHandled: 48,
     totalSales: "$120M+",
-    phone: "+1 (555) 019-2801",
+    phone: "+593 990095001",
     email: "victoria.vance@example.com",
     image: "images/agents/victoria-vance.jpg",
     specialties: [
-      "Architectural Sanctuaries",
-      "Off-Market Whisper Listings",
-      "Celebrity & Family Office Advisory"
+      "Refugios arquitectónicos",
+      "Propiedades confidenciales fuera de mercado",
+      "Asesoría a figuras públicas y family offices"
     ],
-    languages: ["English", "French"],
+    languages: ["Inglés", "Francés"],
     social: {
       linkedin: "https://linkedin.com",
       instagram: "https://instagram.com"
@@ -221,21 +221,21 @@ const AGENTS_DATA = [
   {
     id: "agent-2",
     name: "Julian Montgomery",
-    title: "Senior Vice President, Manhattan Luxury",
-    position: "New York Flagship",
-    bio: "Julian provides white-glove brokerage services across Manhattan's most historic co-ops, Tribeca cast-iron lofts, and Central Park luxury towers. A trusted confidant to private clients, founders, and collectors.",
+    title: "Vicepresidente Senior, Lujo en Guayaquil",
+    position: "Sede principal Guayaquil",
+    bio: "Julian ofrece un servicio de corretaje de máxima distinción en las casas más históricas del centro de Guayaquil, los penthouses del Malecón y las torres de lujo de Puerto Santa Ana. Es un confidente de confianza para clientes privados, fundadores y coleccionistas.",
     experienceYears: 15,
     propertiesHandled: 36,
     totalSales: "$95M+",
-    phone: "+1 (555) 019-2802",
+    phone: "+593 990095002",
     email: "julian.montgomery@example.com",
     image: "images/agents/julian-montgomery.jpg",
     specialties: [
-      "Trophy Penthouses",
-      "Cast-Iron Historic Lofts",
-      "Commercial Real Estate Syndication"
+      "Penthouses exclusivos",
+      "Casas patrimoniales restauradas",
+      "Sindicación inmobiliaria comercial"
     ],
-    languages: ["English", "German"],
+    languages: ["Inglés", "Alemán"],
     social: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com"
@@ -244,21 +244,21 @@ const AGENTS_DATA = [
   {
     id: "agent-3",
     name: "Camilla Valente",
-    title: "Partner, Waterfront & Island Division",
-    position: "Miami Beach & Palm Beach",
-    bio: "A native of South Florida and licensed maritime yacht master, Camilla combines deep oceanographic insight with razor-sharp luxury market acumen across coastal and waterfront sanctuaries.",
+    title: "Socia, División de Patrimonio y Riberas",
+    position: "Cuenca y el Austro",
+    bio: "Nativa del Austro ecuatoriano, Camilla combina un profundo conocimiento del patrimonio arquitectónico con una gran agudeza en el mercado de lujo de casonas históricas y residencias a orillas del río Tomebamba.",
     experienceYears: 14,
     propertiesHandled: 42,
     totalSales: "$110M+",
-    phone: "+1 (555) 019-2803",
+    phone: "+593 990095003",
     email: "camilla.valente@example.com",
     image: "images/agents/camilla-valente.jpg",
     specialties: [
-      "Deepwater Mega-Yacht Estates",
-      "Venetian Islands Compounds",
-      "Private Island Acquisitions"
+      "Casonas patrimoniales restauradas",
+      "Residencias junto al río Tomebamba",
+      "Haciendas y quintas del Austro"
     ],
-    languages: ["English", "Spanish", "Italian"],
+    languages: ["Inglés", "Español", "Italiano"],
     social: {
       linkedin: "https://linkedin.com",
       instagram: "https://instagram.com"
@@ -267,21 +267,21 @@ const AGENTS_DATA = [
   {
     id: "agent-4",
     name: "Harrison Brooks",
-    title: "Principal, Alpine & Equestrian Estates",
-    position: "Aspen & Vail Mountain Desks",
-    bio: "Specializing in legacy ranches, ski-in / ski-out chalets, and equestrian sanctuaries throughout the Colorado Rockies. Harrison's unhurried, data-rich approach is revered by private investors.",
+    title: "Director, Propiedades de Montaña y Ecuestres",
+    position: "Oficina de Ambato y Tungurahua",
+    bio: "Especialista en haciendas patrimoniales, refugios de montaña y propiedades ecuestres en la Sierra central del Ecuador. El enfoque pausado y basado en datos de Harrison es muy valorado por los inversionistas privados.",
     experienceYears: 16,
     propertiesHandled: 29,
     totalSales: "$88M+",
-    phone: "+1 (555) 019-2804",
+    phone: "+593 990095004",
     email: "harrison.brooks@example.com",
     image: "images/agents/harrison-brooks.jpg",
     specialties: [
-      "Ski-in / Ski-out Chalets",
-      "Equestrian Acreage",
-      "Conservation Easement Properties"
+      "Refugios de montaña con vista a volcanes",
+      "Terrenos ecuestres",
+      "Haciendas y reservas privadas"
     ],
-    languages: ["English"],
+    languages: ["Inglés"],
     social: {
       linkedin: "https://linkedin.com",
       instagram: "https://instagram.com"
@@ -290,21 +290,21 @@ const AGENTS_DATA = [
   {
     id: "agent-5",
     name: "Elena Rostova",
-    title: "Senior Partner, European Advisory Desk",
-    position: "Geneva, London & New York Liaison",
-    bio: "Elena navigates cross-border acquisitions and capital allocations for European fiduciaries and international collectors looking to acquire landmark US trophy real estate.",
+    title: "Socia Senior, Mesa de Asesoría Europea",
+    position: "Enlace Ginebra, Londres y Quito",
+    bio: "Elena gestiona adquisiciones y asignaciones de capital transfronterizas para fiduciarios europeos y coleccionistas internacionales que buscan adquirir propiedades emblemáticas en Ecuador.",
     experienceYears: 20,
     propertiesHandled: 54,
     totalSales: "$145M+",
-    phone: "+1 (555) 019-2805",
+    phone: "+593 990095005",
     email: "elena.rostova@example.com",
     image: "images/agents/elena-rostova.jpg",
     specialties: [
-      "Cross-Border Sovereign Advisory",
-      "Historic Architectural Pedigree",
-      "Private Art Gallery Integration"
+      "Asesoría soberana transfronteriza",
+      "Linaje arquitectónico histórico",
+      "Integración de galerías de arte privadas"
     ],
-    languages: ["English", "Russian", "French"],
+    languages: ["Inglés", "Ruso", "Francés"],
     social: {
       linkedin: "https://linkedin.com"
     }
@@ -312,21 +312,21 @@ const AGENTS_DATA = [
   {
     id: "agent-6",
     name: "Sterling Chen",
-    title: "Director, Modernist & Sustainable Architecture",
-    position: "Pacific Palisades & Malibu",
-    bio: "Trained at MIT School of Architecture, Sterling possesses rare technical insight into high-performance zero-carbon engineering, cantilevered hillside construction, and modernist minimalism.",
+    title: "Director, Arquitectura Moderna y Sostenible",
+    position: "Valle de Tumbaco y Quito",
+    bio: "Formado en la Escuela de Arquitectura del MIT, Sterling posee un conocimiento técnico poco común en ingeniería de alto rendimiento con cero emisiones, construcción en voladizo sobre laderas y minimalismo moderno.",
     experienceYears: 11,
     propertiesHandled: 27,
     totalSales: "$72M+",
-    phone: "+1 (555) 019-2806",
+    phone: "+593 990095006",
     email: "sterling.chen@example.com",
     image: "images/agents/sterling-chen.jpg",
     specialties: [
-      "LEED Platinum Compounds",
-      "Cantilevered Coastal Engineering",
-      "Biophilic Design Residences"
+      "Complejos con certificación LEED Platino",
+      "Ingeniería en voladizo sobre laderas",
+      "Residencias de diseño biofílico"
     ],
-    languages: ["English", "Mandarin"],
+    languages: ["Inglés", "Mandarín"],
     social: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com"
@@ -345,8 +345,8 @@ function getAgentById(id) {
 const PROPERTIES_DATA = [
   {
     id: "prop-1",
-    title: "The Bellagio Architectural Promontory",
-    slug: "the-bellagio-architectural-promontory",
+    title: "Villa Mirador de Cumbayá",
+    slug: "villa-mirador-de-cumbaya",
     price: 28500000,
     formattedPrice: "$28,500,000",
     status: "for-sale",
@@ -354,13 +354,13 @@ const PROPERTIES_DATA = [
     bedrooms: 6,
     bathrooms: 8,
     squareFeet: 11400,
-    lotSize: "1.4 Acres",
+    lotSize: "1,4 acres",
     yearBuilt: 2024,
-    address: "840 Bellagio Road",
-    city: "Bel-Air",
-    state: "CA",
-    zipCode: "90077",
-    description: "Meticulously crafted residence by renowned modernist architect. Features seamless indoor-outdoor water pavilions, floor-to-ceiling motorized Swiss glass walls, a 75-foot cantilevered infinity pool overlooking the city to ocean panorama, and a subterranean 6-vehicle gallery with turntable.",
+    address: "Calle de los Cipreses 840",
+    city: "Quito",
+    state: "Pichincha",
+    zipCode: "170157",
+    description: "Residencia minuciosamente diseñada por un reconocido arquitecto modernista. Cuenta con pabellones de agua que integran interior y exterior, muros de vidrio suizo motorizados de piso a techo, una piscina infinita en voladizo de 23 metros con vista panorámica de la ciudad a los volcanes y una galería subterránea para 6 vehículos con plataforma giratoria.",
     heroImage: "images/properties/property-01.jpg",
     images: [
       "images/properties/property-01.jpg",
@@ -370,21 +370,21 @@ const PROPERTIES_DATA = [
       "images/properties/property-05.jpg"
     ],
     features: [
-      "Zero-Edge Horizon Pool",
-      "Subterranean 6-Vehicle Gallery",
-      "Temperature-Controlled Wine Cellar",
-      "Private Guard House & Dual Gates",
-      "Dornbracht & Boffi Kitchen",
-      "Integrated Crestron Automation"
+      "Piscina de horizonte infinito",
+      "Galería subterránea para 6 vehículos",
+      "Bodega de vinos con control de temperatura",
+      "Caseta de guardia privada y doble acceso",
+      "Cocina Dornbracht y Boffi",
+      "Domótica Crestron integrada"
     ],
     featured: true,
-    coordinates: { lat: 34.0837, lng: -118.4468 },
+    coordinates: { lat: -0.2002, lng: -78.4358 },
     agent: getAgentById("agent-1")
   },
   {
     id: "prop-2",
-    title: "The Tribeca Sky Duplex Gallery",
-    slug: "the-tribeca-sky-duplex-gallery",
+    title: "Penthouse Dúplex Malecón Sky",
+    slug: "penthouse-duplex-malecon-sky",
     price: 19800000,
     formattedPrice: "$19,800,000",
     status: "for-sale",
@@ -392,13 +392,13 @@ const PROPERTIES_DATA = [
     bedrooms: 4,
     bathrooms: 5,
     squareFeet: 7200,
-    lotSize: "Private Rooftop (1,800 sq ft)",
+    lotSize: "Azotea privada (167 m²)",
     yearBuilt: 2023,
-    address: "68 Franklin Street, PH-B",
-    city: "New York",
-    state: "NY",
-    zipCode: "10013",
-    description: "An extraordinary duplex penthouse situated atop one of Tribeca's most celebrated historic cast-iron buildings. Direct elevator opening into a 40-foot double-height salon with restored timber ceilings, steel sash fenestration, and a private landscaped rooftop terrace featuring outdoor kitchen and heated soaking spa.",
+    address: "Av. Francisco de Orellana y Justino Cornejo, PH-B",
+    city: "Guayaquil",
+    state: "Guayas",
+    zipCode: "090505",
+    description: "Extraordinario penthouse dúplex en lo alto de una de las torres más celebradas de Guayaquil. El ascensor se abre directamente a un salón de doble altura de 12 metros con ventanales de piso a techo y vistas al río Guayas, y a una terraza privada con jardín, cocina exterior y jacuzzi climatizado.",
     heroImage: "images/properties/property-06.jpg",
     images: [
       "images/properties/property-06.jpg",
@@ -407,21 +407,21 @@ const PROPERTIES_DATA = [
       "images/properties/property-09.jpg"
     ],
     features: [
-      "Direct Keyed Elevator Access",
-      "Private Landscaped Roof Terrace",
-      "Dual Wood-Burning Fireplaces",
-      "Calacatta Vagli Marble Baths",
-      "24-Hour Concierge & Doorman",
-      "Private Deeded Storage Suite"
+      "Acceso directo en ascensor con llave",
+      "Terraza privada con jardín en la azotea",
+      "Jacuzzi privado en la terraza",
+      "Baños en mármol Calacatta Vagli",
+      "Conserjería y portero las 24 horas",
+      "Bodega privada escriturada"
     ],
     featured: true,
-    coordinates: { lat: 40.7183, lng: -74.0048 },
+    coordinates: { lat: -2.1709, lng: -79.9224 },
     agent: getAgentById("agent-2")
   },
   {
     id: "prop-3",
-    title: "Villa Di Palma Venetian Waterfront",
-    slug: "villa-di-palma-venetian-waterfront",
+    title: "Villa Palma frente al río en Samborondón",
+    slug: "villa-palma-frente-al-rio",
     price: 34000000,
     formattedPrice: "$34,000,000",
     status: "for-sale",
@@ -429,13 +429,13 @@ const PROPERTIES_DATA = [
     bedrooms: 7,
     bathrooms: 9,
     squareFeet: 12800,
-    lotSize: "0.85 Acres / 100ft Prime Deepwater",
+    lotSize: "0,85 acres / 30 m de frente al río",
     yearBuilt: 2024,
-    address: "240 San Marino Drive",
-    city: "Miami Beach",
-    state: "FL",
-    zipCode: "33139",
-    description: "Positioned on the prestigious Venetian Islands with western open-bay sunset orientation. Boasting 100 feet of reinforced seawall capable of berthing a 130-foot superyacht. Highlights include Italian travertine courtyards, reflection pools, full wellness spa, and separate 2-bedroom guest pavilion.",
+    address: "Km 5, Vía Samborondón",
+    city: "Guayaquil",
+    state: "Guayas",
+    zipCode: "092301",
+    description: "Ubicada en la prestigiosa vía Samborondón, con orientación oeste hacia el río y atardeceres abiertos. Cuenta con 30 metros de muelle reforzado para atracar un yate de 40 metros. Destacan los patios de travertino italiano, espejos de agua, un spa de bienestar completo y un pabellón de huéspedes independiente de 2 habitaciones.",
     heroImage: "images/properties/property-10.jpg",
     images: [
       "images/properties/property-10.jpg",
@@ -444,21 +444,21 @@ const PROPERTIES_DATA = [
       "images/properties/property-13.jpg"
     ],
     features: [
-      "100ft Deepwater Dock with Yacht Lift",
-      "Wellness Suite with Steam & Sauna",
-      "Bespoke Poliform Master Closets",
-      "Full Security Perimeter & Cameras",
-      "Separate Two-Bedroom Guest Villa",
-      "Sub-Zero & Wolf Commercial Scullery"
+      "Muelle privado de 30 m con elevador de yates",
+      "Suite de bienestar con vapor y sauna",
+      "Vestidores principales Poliform a medida",
+      "Perímetro de seguridad completo con cámaras",
+      "Villa de huéspedes independiente de dos habitaciones",
+      "Cocina de servicio profesional Sub-Zero y Wolf"
     ],
     featured: true,
-    coordinates: { lat: 25.7907, lng: -80.1585 },
+    coordinates: { lat: -2.1000, lng: -79.8600 },
     agent: getAgentById("agent-3")
   },
   {
     id: "prop-4",
-    title: "The Red Mountain Alpine Sanctuary",
-    slug: "the-red-mountain-alpine-sanctuary",
+    title: "El Refugio de Montaña de Ambato",
+    slug: "refugio-de-montana-de-ambato",
     price: 24500000,
     formattedPrice: "$24,500,000",
     status: "for-sale",
@@ -466,13 +466,13 @@ const PROPERTIES_DATA = [
     bedrooms: 5,
     bathrooms: 7,
     squareFeet: 9100,
-    lotSize: "2.8 Private Forested Acres",
+    lotSize: "2,8 acres privados de bosque",
     yearBuilt: 2022,
-    address: "710 Willoughby Way",
-    city: "Aspen",
-    state: "CO",
-    zipCode: "81611",
-    description: "Nestled on Aspen's coveted Red Mountain with unencumbered views of Ajax Mountain and Independence Pass. Architectural masterpiece featuring hand-hewn Montana timbers, Colorado fieldstone, triple-pane heated glass curtain walls, and a heated motor court.",
+    address: "Vía a Pilahuín, km 4",
+    city: "Ambato",
+    state: "Tungurahua",
+    zipCode: "180150",
+    description: "Ubicada en las faldas de la sierra de Ambato, con vistas despejadas al Chimborazo y al volcán Tungurahua. Obra maestra arquitectónica con vigas de madera talladas a mano, piedra volcánica local, muros cortina de vidrio triple y un patio de vehículos cubierto.",
     heroImage: "images/properties/property-14.jpg",
     images: [
       "images/properties/property-14.jpg",
@@ -480,35 +480,35 @@ const PROPERTIES_DATA = [
       "images/properties/property-05.jpg"
     ],
     features: [
-      "Heated Driveway & Ski Locker Room",
-      "Panoramic Outdoor Fire Lounge",
-      "Oxygen-Enriched Master Suite",
-      "Indoor Lap Pool & Cold Plunge",
-      "Commercial Crestron Audio/Visual",
-      "Direct Backcountry Trail Access"
+      "Acceso empedrado y vestidor de montaña",
+      "Sala panorámica exterior con fogata",
+      "Suite principal con vista al Chimborazo",
+      "Piscina interior de largos y tina de agua fría",
+      "Audio y video Crestron profesional",
+      "Acceso directo a senderos de montaña"
     ],
     featured: false,
-    coordinates: { lat: 39.2012, lng: -106.8285 },
+    coordinates: { lat: -1.2417, lng: -78.6267 },
     agent: getAgentById("agent-4")
   },
   {
     id: "prop-5",
-    title: "Carbon Beach Contemporary Promontory",
-    slug: "carbon-beach-contemporary-promontory",
+    title: "Residencia Contemporánea Tomebamba",
+    slug: "residencia-contemporanea-tomebamba",
     price: 45000,
-    formattedPrice: "$45,000 / mo",
+    formattedPrice: "$45,000 / mes",
     status: "for-rent",
-    propertyType: "Coastal Modern",
+    propertyType: "Contemporary Residence",
     bedrooms: 4,
     bathrooms: 5,
     squareFeet: 5600,
-    lotSize: "60ft Beach Frontage",
+    lotSize: "18 m de frente al río",
     yearBuilt: 2023,
-    address: "22108 Pacific Coast Highway",
-    city: "Malibu",
-    state: "CA",
-    zipCode: "90265",
-    description: "Located on Malibu's ultra-exclusive 'Billionaire's Beach'. This newly completed residence opens entirely to an oceanfront teak deck hovering above the Pacific. Complete with private stairs to the sand, sunset cocktail terrace, and automated louvers.",
+    address: "Av. Paseo de los Cañaris 220",
+    city: "Cuenca",
+    state: "Azuay",
+    zipCode: "010107",
+    description: "Ubicada junto al río Tomebamba, a pocos minutos del centro histórico de Cuenca. Esta residencia recién terminada se abre por completo a una terraza de ipé que domina el río. Incluye acceso privado a la ribera, terraza para cócteles al atardecer y persianas automatizadas.",
     heroImage: "images/properties/property-15.jpg",
     images: [
       "images/properties/property-15.jpg",
@@ -516,35 +516,35 @@ const PROPERTIES_DATA = [
       "images/properties/property-04.jpg"
     ],
     features: [
-      "Direct Private Beach Stairway",
-      "Expansive Ipe Oceanfront Deck",
-      "Automated Solar Louvers",
-      "Miele & Gaggenau Chef's Kitchen",
-      "Outdoor Heated Shower & Surf Locker",
-      "Fully Furnished Turnkey Interiors"
+      "Acceso privado directo a la ribera",
+      "Amplia terraza de ipé frente al río",
+      "Persianas solares automatizadas",
+      "Cocina de chef Miele y Gaggenau",
+      "Jardín con ducha exterior y zona de bienestar",
+      "Interiores totalmente amoblados, listos para habitar"
     ],
     featured: false,
-    coordinates: { lat: 34.0375, lng: -118.6653 },
+    coordinates: { lat: -2.9001, lng: -79.0059 },
     agent: getAgentById("agent-1")
   },
   {
     id: "prop-6",
-    title: "The Mandarin Oriental Sky Residence",
-    slug: "the-mandarin-oriental-sky-residence",
+    title: "La Residencia Sky de La Carolina",
+    slug: "residencia-sky-la-carolina",
     price: 65000,
-    formattedPrice: "$65,000 / mo",
+    formattedPrice: "$65,000 / mes",
     status: "for-rent",
     propertyType: "Hotel Residence",
     bedrooms: 3,
     bathrooms: 4,
     squareFeet: 4800,
-    lotSize: "Private Balcony",
+    lotSize: "Balcón privado",
     yearBuilt: 2022,
-    address: "80 Columbus Circle, Residence 64A",
-    city: "New York",
-    state: "NY",
-    zipCode: "10023",
-    description: "Corner tower residence hovering 64 stories above Central Park and the Hudson River. Residents enjoy Michelin-starred hotel room service, priority access to the world-renowned spa, 75-foot indoor pool, and personal residential butler service.",
+    address: "Av. Naciones Unidas y Av. de los Shyris, Residencia 24A",
+    city: "Quito",
+    state: "Pichincha",
+    zipCode: "170135",
+    description: "Residencia en esquina de la torre, en el piso 24 frente al parque La Carolina y con vistas a los volcanes. Los residentes disfrutan de servicio a la habitación de nivel hotelero, acceso prioritario a un spa de primer nivel, una piscina interior de 23 metros y servicio personal de mayordomo.",
     heroImage: "images/properties/property-07.jpg",
     images: [
       "images/properties/property-07.jpg",
@@ -552,15 +552,15 @@ const PROPERTIES_DATA = [
       "images/properties/property-09.jpg"
     ],
     features: [
-      "Unobstructed Central Park Views",
-      "Full Mandarin Oriental Hotel Amenities",
-      "Private Valet & Concierge",
-      "Dedicated Butler Service Included",
-      "State-of-the-Art Spa & Fitness Access",
-      "Custom Christian Liaigre Furnishings"
+      "Vistas despejadas al parque La Carolina",
+      "Todos los servicios de la torre hotelera",
+      "Valet y conserjería privados",
+      "Servicio de mayordomo dedicado incluido",
+      "Acceso a spa y gimnasio de última generación",
+      "Mobiliario Christian Liaigre a medida"
     ],
     featured: false,
-    coordinates: { lat: 40.7685, lng: -73.9818 },
+    coordinates: { lat: -0.1807, lng: -78.4840 },
     agent: getAgentById("agent-2")
   }
 ];
